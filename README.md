@@ -1,5 +1,5 @@
 
-IPv6-in-IPv4 tunnel in Docker container with random ipv6 outbound through http/socks5 proxy
+IPv6-in-IPv4 tunnel in Docker container with random ipv6 outbound and expose http/socks5 proxy
 
 ## Usage
 `Server_IPv4` & `Client_IPv6` can be found in [tunnelbroker](https://tunnelbroker.net/)
