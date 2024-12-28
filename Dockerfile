@@ -5,9 +5,7 @@ COPY entrypoint.sh /
 RUN true && \
     apk add --no-cache iproute2 procps bash curl && \
     echo "net.ipv6.conf.all.disable_ipv6 = 0" >> /etc/sysctl.conf && \
-    wget https://github.com/gngpp/vproxy/releases/download/v0.3.1/vproxy-0.3.1-x86_64-unknown-linux-musl.tar.gz -O vproxy.tar.gz && \
-    tar zxvf vproxy.tar.gz -C / && \
-    rm -rf vproxy.tar.gz && \
+    wget https://github.com/baby9/6in4-tunnel-docker/releases/download/v0.3.1/vproxy-0.3.1-x86_64-linux -O vproxy && \
     chmod +x /vproxy /entrypoint.sh
 
 HEALTHCHECK --interval=90s --timeout=15s --retries=2 --start-period=120s \
