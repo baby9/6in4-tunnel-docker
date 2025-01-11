@@ -28,4 +28,4 @@ curl -x http://localhost:8100 ip.sb
 ````
 
 ## Reference
-- [vproxy](https://github.com/gngpp/vproxy) - An easy and powerful Rust HTTP/Socks5 proxy that allows initiating network requests using IP binding calculated from CIDR addresses.
+- [vproxy](https://github.com/0x676e67/vproxy) - An easy and powerful Rust HTTP/Socks5 proxy that allows initiating network requests using IP binding calculated from CIDR addresses.
