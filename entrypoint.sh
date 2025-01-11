@@ -22,7 +22,7 @@ if [ -z $(cat /proc/net/dev | awk '{i++;if(i>2)print $1}' | sed 's/[:]*$//g' | g
     exit 1
 fi
 
-if (! $(curl -fs http://edge.microsoft.com/captiveportal/generate_204 --interface 6in4-tunnel --max-time 10 --retry 2))
+if [ ! $(curl -sI -w "%{http_code}" http://edge.microsoft.com/captiveportal/generate_204 --interface 6in4-tunnel --max-time 10 --retry 2 -o /dev/null) -eq 204 ]
 then
     exit 1
 fi
